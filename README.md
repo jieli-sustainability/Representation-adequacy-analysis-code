@@ -1,7 +1,10 @@
 # Representation-Adequacy Analysis Code
-#Analysis code accompanying "Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning" (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), submitted to *Energy and AI*.
-#The study uses a standards-linked XAI/SHAP framework (XGBoost models, TreeSHAP attribution) applied to two national residential energy datasets, RECS and EULP/ResStock, to diagnose representation-sensitive priorities relevant to residential energy performance representation adequacy, mapped to ANSI/RESNET/ICC 301-2022. SHAP importance is diagnostic evidence about which inputs the models rely on most heavily, aggregated to underlying building/household features. It does not identify causal drivers or determinants of any outcome, and does not evaluate 301's specific equations.
+Analysis code accompanying "Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning" (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), submitted to *Energy and AI*.
+
+The study uses a standards-linked XAI/SHAP framework (XGBoost models, TreeSHAP attribution) applied to two national residential energy datasets, RECS and EULP/ResStock, to diagnose representation-sensitive priorities relevant to residential energy performance representation adequacy, mapped to ANSI/RESNET/ICC 301-2022. SHAP importance is diagnostic evidence about which inputs the models rely on most heavily, aggregated to underlying building/household features. It does not identify causal drivers or determinants of any outcome, and does not evaluate 301's specific equations.
+
 All findings are framed accordingly throughout (see manuscript §2.4 for the full framing).
+
 # Repository structure
 ```
 .
@@ -21,7 +24,7 @@ All findings are framed accordingly throughout (see manuscript §2.4 for the ful
 ├── LICENSE
 └── CITATION.cff
 ```
-Paper-to-code mapping
+# Paper-to-code mapping
 Manuscript element	Source
 §2.1–2.2 preprocessing, feature encoding	`modeling/{recs,eulp}/01\_preprocess\_\*.ipynb`
 §2.3 model training (RF, ElasticNet, XGBoost, NN)	`modeling/{recs,eulp}/02\_train\_models\_\*.ipynb`
@@ -30,7 +33,7 @@ Manuscript element	Source
 The robustness scripts are meant to be run after the corresponding
 `02\_train\_models\_\*` notebook, using the same trained model objects (or, if running standalone, they reconstruct the final models from
 `tuning\_logs.json`, exactly as documented in each script's docstring).
-Environment
+# Environment
 ```bash
 pip install -r requirements.txt
 ```
@@ -38,7 +41,7 @@ Developed with Python 3.11. The package versions used for the archived
 analysis are specified in `requirements.txt`. Minor differences in
 scikit-learn, XGBoost, or SHAP versions may produce small numerical
 differences in cross-validation and bootstrap results.
-Data availability
+# Data availability
 This repository contains code only — no raw or processed household-level
 data files are included. The datasets are public and can be obtained from:
 RECS (Residential Energy Consumption Survey): U.S. Energy Information
@@ -49,7 +52,7 @@ Place the raw datasets in the corresponding project data directories
 before running the preprocessing notebooks. For EULP, the expected input
 is `01\_Data/eulp.csv`. See `01\_preprocess\_recs.ipynb` for the required
 RECS input filename and structure.
-Diagnostic, not causal — and a note on terminology
+# Diagnostic, not causal — and a note on terminology
 SHAP importance values describe how much each feature contributes to a
 model's prediction, not how much it causes the outcome. Throughout this
 repository and the associated manuscript, the retained/aggregated features
