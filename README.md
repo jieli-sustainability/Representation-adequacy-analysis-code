@@ -25,11 +25,13 @@ All findings are framed accordingly throughout (see manuscript §2.4 for the ful
 └── CITATION.cff
 ```
 # Paper-to-code mapping
+
 Manuscript element	Source
 §2.1–2.2 preprocessing, feature encoding	`modeling/{recs,eulp}/01\_preprocess\_\*.ipynb`
 §2.3 model training (RF, ElasticNet, XGBoost, NN)	`modeling/{recs,eulp}/02\_train\_models\_\*.ipynb`
 §2.3–3.2 SHAP attribution, aggregation to underlying features, Tables 3–5 (representation-sensitive priorities, Strong/Partial/Conditional tiers)	`modeling/{recs,eulp}/03\_importance\_\*.ipynb`
 §3.1 k-fold CV (Table 2), bootstrap CIs (Table 3), VIF diagnostics (Appendix E)	`robustness/run\_robustness\_{recs,eulp}.py`
+
 The robustness scripts are meant to be run after the corresponding
 `02\_train\_models\_\*` notebook, using the same trained model objects (or, if running standalone, they reconstruct the final models from
 `tuning\_logs.json`, exactly as documented in each script's docstring).
@@ -44,10 +46,12 @@ differences in cross-validation and bootstrap results.
 # Data availability
 This repository contains code only — no raw or processed household-level
 data files are included. The datasets are public and can be obtained from:
+
 RECS (Residential Energy Consumption Survey): U.S. Energy Information
 Administration, https://www.eia.gov/consumption/residential/
 EULP / ResStock (End-Use Load Profiles): National Renewable Energy
 Laboratory, https://www.nrel.gov/buildings/end-use-load-profiles
+
 Place the raw datasets in the corresponding project data directories
 before running the preprocessing notebooks. For EULP, the expected input
 is `01\_Data/eulp.csv`. See `01\_preprocess\_recs.ipynb` for the required
@@ -60,7 +64,7 @@ are referred to as representation-sensitive priorities — i.e., inputs
 whose representation in a dataset or rating engine most strongly shapes
 model output — rather than as "drivers" or "determinants," since those terms
 imply a causal relationship that SHAP attribution does not establish.
-Citation
+# Citation
 If you use this code, please cite both the archived software release and the associated article.
-License
+# License
 MIT — see `LICENSE`.
