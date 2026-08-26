@@ -23,11 +23,11 @@ keywords:
   - RECS
   - ResStock
 
-repository-code: "https://github.com/YOUR_USERNAME/YOUR_REPOSITORY"
+repository-code: "https://github.com/jieli-sustainability/representation-adequacy-analysis-code"
 
 license: MIT
 version: 1.0.0
-date-released: "2026-08-XX"
+date-released: "2026-08-26"
 
 preferred-citation:
   type: article
@@ -51,4 +51,4 @@ preferred-citation:
 
   journal: "Energy and AI"
   year: 2026
-  status: submitted
+  status: under revision
