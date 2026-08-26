@@ -1,12 +1,8 @@
-Representation-Adequacy Analysis Code
-Analysis code accompanying "Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning" (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), submitted to ***Energy and AI*.
-The study uses a standards-linked XAI/SHAP framework (XGBoost models, TreeSHAP attribution) applied to two national residential energy datasets, RECS and EULP/ResStock, to diagnose representation-sensitive priorities relevant to residential energy performance representation adequacy, mapped to ANSI/RESNET/ICC 301-2022. SHAP importance is diagnostic evidence
-about which inputs the models rely on most heavily, aggregated to underlying
-building/household features. It does not identify causal drivers or
-determinants of any outcome, and does not evaluate 301's specific equations.
-All findings are framed accordingly throughout (see manuscript §2.4 for the
-full framing).
-Repository structure
+# Representation-Adequacy Analysis Code
+#Analysis code accompanying "Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning" (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), submitted to *Energy and AI*.
+#The study uses a standards-linked XAI/SHAP framework (XGBoost models, TreeSHAP attribution) applied to two national residential energy datasets, RECS and EULP/ResStock, to diagnose representation-sensitive priorities relevant to residential energy performance representation adequacy, mapped to ANSI/RESNET/ICC 301-2022. SHAP importance is diagnostic evidence about which inputs the models rely on most heavily, aggregated to underlying building/household features. It does not identify causal drivers or determinants of any outcome, and does not evaluate 301's specific equations.
+All findings are framed accordingly throughout (see manuscript §2.4 for the full framing).
+# Repository structure
 ```
 .
 ├── modeling/
