@@ -15,16 +15,16 @@ full framing).
 .
 ├── modeling/
 │   ├── recs/
-│   │   ├── 01\\\_preprocess\\\_recs.ipynb          # cleaning, encoding, 
-│   │   ├── 02\\\_train\\\_models\\\_recs.ipynb        # RF / ElasticNet / XGBoost /NN
-│   │   └── 03\\\_importance\\\_recs.ipynb          # SHAP computation and 
+│   │   ├── 01_preprocess_recs.ipynb          # cleaning, encoding, 
+│   │   ├── 02_train_models_recs.ipynb        # RF / ElasticNet / XGBoost /NN
+│   │   └── 03_importance_recs.ipynb          # SHAP computation and 
 │   └── eulp/
-│       ├── 01\\\_preprocess\\\_eulp.ipynb
-│       ├── 02\\\_train\\\_models\\\_eulp.ipynb
-│       └── 03\\\_importance\\\_eulp.ipynb
+│       ├── 01_preprocess_eulp.ipynb
+│       ├── 02_train_models_eulp.ipynb
+│       └── 03_importance_eulp.ipynb
 ├── robustness/
-│   ├── run\\\_robustness\\\_recs.py    # 5-fold CV, bootstrap CI, VIF  (RECS)
-│   └── run\\\_robustness\\\_eulp.py    # 5-fold CV, bootstrap CI, VIF  (EULP)
+│   ├── run_robustness_recs.py    # 5-fold CV, bootstrap CI, VIF  (RECS)
+│   └── run_robustness_eulp.py    # 5-fold CV, bootstrap CI, VIF  (EULP)
 ├── requirements.txt
 ├── LICENSE
 └── CITATION.cff
@@ -34,14 +34,14 @@ full framing).
 
 |Manuscript element|Source|
 |-|-|
-|§2.1–2.2 preprocessing, feature encoding|`modeling/{recs,eulp}/01\\\_preprocess\\\_\\\*.ipynb`|
-|§2.3 model training (RF, ElasticNet, XGBoost, NN)|`modeling/{recs,eulp}/02\\\_train\\\_models\\\_\\\*.ipynb`|
-|§2.3–3.2 SHAP attribution, aggregation to underlying features, Tables 3–5 (representation-sensitive priorities, Strong/Partial/Conditional tiers)|`modeling/{recs,eulp}/03\\\_importance\\\_\\\*.ipynb`|
-|§3.1 k-fold CV (Table 2), bootstrap CIs (Table 3), VIF diagnostics (Appendix E)|`robustness/run\\\_robustness\\\_{recs,eulp}.py`|
+|§2.1–2.2 preprocessing, feature encoding|`modeling/{recs,eulp}/01_preprocess_*.ipynb`|
+|§2.3 model training (RF, ElasticNet, XGBoost, NN)|`modeling/{recs,eulp}/02_train_models_*.ipynb`|
+|§2.3–3.2 SHAP attribution, aggregation to underlying features, Tables 3–5 (representation-sensitive priorities, Strong/Partial/Conditional tiers)|`modeling/{recs,eulp}/03_importance_*.ipynb`|
+|§3.1 k-fold CV (Table 2), bootstrap CIs (Table 3), VIF diagnostics (Appendix E)|`robustness/run_robustness_{recs,eulp}.py`|
 
 The robustness scripts are meant to be run **after** the corresponding
-`02\\\_train\\\_models\\\_\\\*` notebook, using the same trained model objects (or, if running standalone, they reconstruct the final models from
-`tuning\\\_logs.json`, exactly as documented in each script's docstring).
+`02_train_models_*` notebook, using the same trained model objects (or, if running standalone, they reconstruct the final models from
+`tuning_logs.json`, exactly as documented in each script's docstring).
 
 ## Environment
 
@@ -71,7 +71,7 @@ Place the raw datasets in the corresponding project data directories
 
 before running the preprocessing notebooks. For EULP, the expected input
 
-is `01\\\_Data/eulp.csv`. See `01\\\_preprocess\\\_recs.ipynb` for the required
+is `01_Data/eulp.csv`. See `01_preprocess_recs.ipynb` for the required
 
 RECS input filename and structure.
 
