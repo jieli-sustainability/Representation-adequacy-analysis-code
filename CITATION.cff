@@ -4,11 +4,6 @@ type: software
 
 title: "Analysis Code for Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning"
 
-authors:
-  - family-names: "Li"
-    given-names: "Jie"
-    orcid: "https://orcid.org/0000-0002-2755-4797"
-
 abstract: >
   Analysis code supporting the standards-linked explainable machine learning
   analysis of representation adequacy in standardized residential energy models
@@ -24,10 +19,12 @@ keywords:
   - ResStock
 
 repository-code: "https://github.com/jieli-sustainability/representation-adequacy-analysis-code"
+doi: "10.5281/zenodo.YOUR_FORMAL_DOI"
+url: "https://doi.org/10.5281/zenodo.YOUR_FORMAL_DOI"
 
 license: MIT
 version: 1.0.0
-date-released: "2026-08-26"
+date-released: "2026-09-14"
 
 preferred-citation:
   type: article
@@ -51,4 +48,3 @@ preferred-citation:
 
   journal: "Energy and AI"
   year: 2026
-  status: under revision
