@@ -1,6 +1,6 @@
 # Representation-Adequacy Analysis Code
 
-Analysis code accompanying **"Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning"** (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), submitted to \*Energy and AI\*.
+Analysis code accompanying **"Do Standardized Residential Energy Models Represent the Variables That Matter? Evidence from Explainable Machine Learning"** (Jie Li, Guido Cervone, José P. Duarte, Ute Poerschke, Lisa D. Iulo), accepted for publication in \*Energy and AI\*.
 
 The study uses a standards-linked XAI/SHAP framework (XGBoost models, TreeSHAP attribution) applied to two national residential energy datasets, **RECS** and **EULP/ResStock**, to diagnose representation-sensitive priorities relevant to residential energy performance representation adequacy, mapped to ANSI/RESNET/ICC 301-2022. SHAP importance is diagnostic evidence
 about which inputs the models rely on most heavily, aggregated to underlying
@@ -15,9 +15,9 @@ full framing).
 .
 ├── modeling/
 │   ├── recs/
-│   │   ├── 01_preprocess_recs.ipynb          # cleaning, encoding, 
-│   │   ├── 02_train_models_recs.ipynb        # RF / ElasticNet / XGBoost /NN
-│   │   └── 03_importance_recs.ipynb          # SHAP computation and 
+│   │   ├── 01_preprocess_recs.ipynb        
+│   │   ├── 02_train_models_recs.ipynb        # RF/ElasticNet/XGBoost/NN
+│   │   └── 03_importance_recs.ipynb          # SHAP computation
 │   └── eulp/
 │       ├── 01_preprocess_eulp.ipynb
 │       ├── 02_train_models_eulp.ipynb
